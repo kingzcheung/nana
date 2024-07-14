@@ -17,10 +17,10 @@ lazy_static! {
         let mut m = HashMap::new();
         m.insert(
             String::from("axum"),
-            "https://github.com/kingzcheung/bdzer".into(),
+            "https://github.com/kingzcheung/nana-template-axum".into(),
         );
-        m.insert(String::from("salvo"), "1".into());
-        m.insert(String::from("actix"), "1".into());
+        m.insert(String::from("salvo"), "todo".into());
+        m.insert(String::from("actix"), "todo".into());
         m
     };
 }
@@ -121,5 +121,9 @@ fn get_template_name() -> String {
         .item("actix", "actix-web", "https://actix.rs/")
         .interact()
         .unwrap();
+
+    if kind != "axum" {
+        panic!("暂不支持该框架")
+    }
     kind.into()
 }
