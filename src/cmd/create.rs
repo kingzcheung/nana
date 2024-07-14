@@ -56,7 +56,7 @@ pub(crate) fn create_project(project_name: &Option<String>) -> Result<()> {
 
     cliclack::outro(format!(
         "Problems? {}\n",
-        style("https://example.com/issues").cyan().underlined()
+        style("https://github.com/kingzcheung/nana/issues").cyan().underlined()
     ))
     .unwrap();
     Ok(())
