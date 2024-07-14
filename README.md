@@ -2,7 +2,7 @@
 
 
 ```
-$ nana create axum
+$ nana create project_name
 ┌   create-app 
 │
 ◇  Where should we create your project?

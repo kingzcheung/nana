@@ -18,6 +18,6 @@ pub enum Commands {
     /// create a new project
     #[command(alias="new")]
     Create {
-        framework: Option<String>,
+        name: Option<String>,
     },
 }

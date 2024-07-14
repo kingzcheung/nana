@@ -11,7 +11,7 @@ fn main() {
     let cli = Cli::parse();
 
     match &cli.command {
-        Some(Commands::Create { framework }) => match create_project(framework) {
+        Some(Commands::Create { name }) => match create_project(name) {
             Ok(_) => todo!(),
             Err(err) => {
                 println!("{}", err);
