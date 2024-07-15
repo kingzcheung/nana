@@ -11,3 +11,8 @@ thiserror = "1"
 lazy_static = "1.5.0"
 ctrlc = "3.4"
 console = "0.15.8"
+quote = "1.0"
+syn = {version = "2.0.71", features = ["full"]}
+anyhow = "1.0.75"
+prettyplease = "0.2.20"
+cargo_toml = "0.20.3"
