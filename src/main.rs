@@ -12,7 +12,9 @@ fn main() {
 
     match &cli.command {
         Some(Commands::Create { name }) => match create_project(name) {
-            Ok(_) => todo!(),
+            Ok(_) => {
+                println!("Project created successfully!");
+            },
             Err(err) => {
                 println!("{}", err);
             }

@@ -1,6 +1,6 @@
 use std::path::Path;
 
-use git2::Repository;
+use git2::{ProxyOptions, Repository};
 
 use crate::error::{CliError, Result};
 
@@ -25,6 +25,9 @@ pub(crate) fn clone_repo<P: AsRef<Path>>(repo_url: &str, project_name: P) -> Res
 
     // 设置克隆的深度为1，即只拉取最近一次的提交。
     fetch_opts.depth(1);
+    let mut proxy = ProxyOptions::new();
+    proxy.auto();
+    fetch_opts.proxy_options(proxy);
 
     // 将拉取选项应用到RepoBuilder中，以影响克隆操作。
     builder.fetch_options(fetch_opts);

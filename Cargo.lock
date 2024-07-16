@@ -362,8 +362,10 @@ dependencies = [
  "lazy_static",
  "prettyplease",
  "quote",
+ "serde",
  "syn",
  "thiserror",
+ "toml",
 ]
 
 [[package]]
